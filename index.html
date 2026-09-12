@@ -1744,7 +1744,9 @@
         <p class="subtitle">Try bitfly mining and validate your own blocks on the blockchain</p>
         <h1 class="main-title">bitfly <span class="gold-text">mining</span></h1>
         <p class="description">The world's most innovative, unique and simple way to mine crypto. Start your one-click crypto mining journey today.</p>
-        <button class="glow-button" id="startNowBtn">Start Now</button>
+       <button class="glow-button" id="startNowBtn" onclick="showPageView('investmentPlansSection')">
+  Start Now
+</button>
       </div>
     </section>
 
@@ -2322,14 +2324,21 @@
       updateReferralLink(user);
       updateReferralUIVisibility(true);
 
-      // Show account-only nav items
-      document.querySelectorAll(".account-only").forEach(el => el.style.display = "");
-      document.querySelectorAll(".login-only").forEach(el => el.style.display = "none");
+// Show Account and Investment Plans navigation links
+const navAccountLi = document.getElementById("navAccountLi");
+const navInvestmentPlansLi = document.getElementById("navInvestmentPlansLi");
 
-      // Show account page
-      showPageView("accountPageView");
-    }
+if (navAccountLi) {
+  navAccountLi.classList.remove("hidden");
+}
 
+if (navInvestmentPlansLi) {
+  navInvestmentPlansLi.classList.remove("hidden");
+}
+
+// Show account page
+showPageView("homePageView");
+}
     function lockUserExperience() {
       // Clear user info
       const fields = ["dbProfileName","dbProfileId","dbProfileEmail","dbProfilePhone","dbProfileAvatar","dbAccountBalance"];
@@ -2458,8 +2467,6 @@
     function closeAuthModal() {
       authModal.classList.remove('active');
     }
-
-    startNowBtn.addEventListener('click', () => openAuthModal('signup'));
 
     function toggleView(view) {
       const signupView = document.getElementById('signup-view');
