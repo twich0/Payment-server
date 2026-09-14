@@ -28,7 +28,6 @@
       --shadow-input: inset 0 2px 4px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(150, 140, 180, 0.08);
       --gold-accent: #f7a600;
 
-      /* Account Center Variables */
       --ac-bg: #050b2e;
       --ac-card: #0b1442;
       --ac-text: #f8fafc;
@@ -40,7 +39,6 @@
       --ac-gradient: linear-gradient(135deg, #2563eb, #1e40af, #172554);
       --ac-green: #16a34a;
       
-      /* Black & Gold Dashboard Theme Variables */
       --db-bg: #0b0b0d;
       --db-card: #141419;
       --db-border: #2a2a35;
@@ -84,7 +82,6 @@
       min-height: 100vh;
     }
 
-    /* PAGE VIEW TOGGLES */
     .page-view {
       display: none;
     }
@@ -92,7 +89,6 @@
       display: block;
     }
 
-    /* Hero Section Container */
     .hero-banner {
       position: relative;
       width: 100%;
@@ -116,7 +112,6 @@
       z-index: 1;
     }
 
-    /* Navbar & Brand Styles */
     .navbar {
       width: 100%;
       display: flex;
@@ -177,7 +172,6 @@
       filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
     }
 
-    /* Side Drawer Navigation */
     .nav-drawer {
       position: fixed;
       top: 0;
@@ -376,7 +370,6 @@
       to { transform: rotate(360deg); }
     }
 
-    /* INVESTMENT PLANS FULL PAGE STYLING */
     .investment-plans-wrapper {
       background: #050b2e;
       color: white;
@@ -386,7 +379,6 @@
       position: relative;
     }
 
-    /* Circular Back Arrow Button */
     .back-circle-btn {
       display: inline-flex;
       align-items: center;
@@ -658,7 +650,6 @@
       color: #555555;
     }
 
-    /* FINANCIAL CALCULATOR */
     .financial-calculator {
       width: 100%;
       padding: 30px 15px 60px 15px;
@@ -857,7 +848,6 @@
       margin-top: 6px;
     }
 
-    /* COMPARISON SECTION */
     .comparison-wrapper {
       background: #f5f5f5;
       padding: 50px 20px 60px 20px;
@@ -937,7 +927,6 @@
       border: 3px solid #ffffff;
     }
 
-    /* REFERRAL SECTION */
     .referral-section {
       width: 100%;
       padding: 60px 20px 80px 20px;
@@ -1044,7 +1033,6 @@
       box-shadow: 0 4px 12px rgba(247, 166, 0, 0.35);
     }
 
-    /* REFERRAL LINK DISPLAY */
     .referral-link-box {
       margin: 32px auto 0 auto;
       max-width: 620px;
@@ -1116,9 +1104,6 @@
       gap: 8px;
     }
 
-    /* ======================================================
-       NEW ACCOUNT DASHBOARD STYLES (Black & Gold Theme)
-       ====================================================== */
     .account-dashboard-wrapper {
       background-color: var(--db-bg);
       color: var(--db-text);
@@ -1131,7 +1116,6 @@
       margin: 0 auto;
     }
 
-    /* Dashboard Header */
     .db-header {
       background-color: var(--db-card);
       border: 1px solid var(--db-border);
@@ -1226,7 +1210,6 @@
       color: #000;
     }
 
-    /* Account Balance Card */
     .db-balance-card {
       background-color: var(--db-card);
       border: 1px solid var(--db-border);
@@ -1308,7 +1291,6 @@
       color: #000;
     }
 
-    /* Dashboard Stats Grid */
     .db-stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1375,7 +1357,6 @@
       color: #000;
     }
 
-    /* Dashboard ID Banner */
     .dashboard-id-banner {
       background: var(--db-card);
       border: 1px solid var(--gold-primary);
@@ -1394,9 +1375,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* ======================================================
-       PROFILE CARD WITH TOGGLEABLE MORE SECTION
-       ====================================================== */
     .db-profile-card {
       background-color: var(--db-card);
       border: 1px solid var(--db-border);
@@ -1513,7 +1491,1062 @@
       display: none !important;
     }
 
-    /* AUTH MODAL & UI STYLES */
+    .db-active-plans {
+      background-color: var(--db-card);
+      border: 1px solid var(--db-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px var(--shadow-color);
+      margin-top: 1.5rem;
+    }
+
+    .db-active-plans-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .db-active-plans-header h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--db-text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .db-active-plans-header h3 i {
+      color: var(--gold-primary);
+    }
+
+    .db-active-plans-count {
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--gold-primary);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .db-plans-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .db-plan-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--db-bg);
+      border: 1px solid var(--db-border);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      transition: border-color 0.2s ease;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .db-plan-item:hover {
+      border-color: var(--gold-primary);
+    }
+
+    .db-plan-item-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .db-plan-item-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: rgba(212, 175, 55, 0.1);
+      color: var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .db-plan-item-info h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--db-text);
+      margin-bottom: 2px;
+    }
+
+    .db-plan-item-info p {
+      font-size: 0.75rem;
+      color: var(--db-muted);
+    }
+
+    .db-plan-item-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .db-plan-item-return {
+      text-align: right;
+    }
+
+    .db-plan-item-return .return-rate {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+    }
+
+    .db-plan-item-return .return-investment {
+      font-size: 0.7rem;
+      color: var(--db-muted);
+    }
+
+    .db-plan-status-badge {
+      background: rgba(34, 197, 94, 0.15);
+      color: #4ade80;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .db-plan-item.locked .db-plan-status-badge {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+    }
+
+    .db-empty-plans {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--db-muted);
+    }
+
+    .db-empty-plans i {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--db-border);
+      display: block;
+    }
+
+    .db-empty-plans p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .db-empty-plans .db-btn-gold {
+      font-size: 0.8rem;
+      padding: 10px 20px;
+    }
+
+    .payment-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(6px);
+      z-index: 3000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .payment-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .payment-modal-content {
+      width: 100%;
+      max-width: 560px;
+      max-height: 90vh;
+      overflow-y: auto;
+      background: transparent;
+      border-radius: 24px;
+      position: relative;
+      transform: translateY(20px) scale(0.98);
+      transition: transform 0.3s ease;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    }
+
+    .payment-modal-overlay.active .payment-modal-content {
+      transform: translateY(0) scale(1);
+    }
+
+    .payment-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-size: 24px;
+      font-weight: 300;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease;
+      line-height: 1;
+    }
+
+    .payment-modal-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .payment-card {
+      width: 100%;
+      background: rgba(16, 29, 45, .96);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .02);
+      overflow: hidden;
+      color: #f8fafc;
+    }
+
+    .portal-header {
+      padding: 26px 25px 22px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, .18), rgba(16, 29, 45, .5));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .brand-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .payment-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 43px;
+      height: 43px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #2563eb, #1746a2);
+      font-size: 19px;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, .3);
+      color: #fff;
+    }
+
+    .payment-brand-text h1 {
+      font-size: 18px;
+      font-weight: 750;
+      letter-spacing: -.3px;
+    }
+
+    .payment-brand-text p {
+      margin-top: 3px;
+      color: #94a3b8;
+      font-size: 12px;
+    }
+
+    .status-pill {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 11px;
+      border-radius: 30px;
+      background: rgba(34, 197, 94, .08);
+      border: 1px solid rgba(34, 197, 94, .15);
+      color: #86efac;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 10px rgba(34, 197, 94, .7);
+    }
+
+    .balance-card-payment {
+      margin-top: 22px;
+      padding: 18px 20px;
+      border-radius: 17px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .045), rgba(255, 255, 255, .015));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .balance-label-payment {
+      color: #94a3b8;
+      font-size: 12px;
+      margin-bottom: 7px;
+    }
+
+    .balance-value-payment {
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+    }
+
+    .balance-note-payment {
+      margin-top: 5px;
+      color: #94a3b8;
+      font-size: 11px;
+    }
+
+    .tabs {
+      display: flex;
+      padding: 8px;
+      background: #0a1524;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .tab-btn {
+      flex: 1;
+      border: 0;
+      background: transparent;
+      color: #94a3b8;
+      padding: 13px 10px;
+      border-radius: 11px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .tab-btn:hover {
+      color: white;
+    }
+
+    .tab-btn.active {
+      color: white;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      box-shadow: 0 7px 18px rgba(37, 99, 235, .25);
+    }
+
+    .tab-content {
+      padding: 25px;
+      display: none;
+      animation: fadeIn .25s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-title {
+      margin-bottom: 21px;
+    }
+
+    .section-title h2 {
+      font-size: 21px;
+      font-weight: 750;
+    }
+
+    .section-title p {
+      color: #94a3b8;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    .form-group {
+      margin-bottom: 19px;
+    }
+
+    .payment-card label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #dbeafe;
+      margin-bottom: 8px;
+    }
+
+    .payment-card input,
+    .payment-card select {
+      width: 100%;
+      padding: 14px 15px;
+      background: #0b1626;
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      font-size: 14px;
+      outline: none;
+      transition: .2s ease;
+      appearance: none;
+    }
+
+    .payment-card select {
+      cursor: pointer;
+    }
+
+    .payment-card input::placeholder {
+      color: #64748b;
+    }
+
+    .payment-card input:focus,
+    .payment-card select:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, .12);
+      background: #0d1b2d;
+    }
+
+    .deposit-info-box {
+      position: relative;
+      background: linear-gradient(135deg, rgba(37, 99, 235, .09), rgba(255, 255, 255, .02));
+      border: 1px solid rgba(59, 130, 246, .25);
+      border-radius: 15px;
+      padding: 17px;
+      margin-bottom: 21px;
+    }
+
+    .info-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #93c5fd;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .5px;
+      margin-bottom: 15px;
+    }
+
+    .info-title-icon {
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: rgba(59, 130, 246, .13);
+      font-size: 12px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .05);
+      font-size: 12px;
+    }
+
+    .info-row:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .info-label {
+      color: #94a3b8;
+      flex-shrink: 0;
+    }
+
+    .info-value {
+      color: #e2e8f0;
+      font-weight: 650;
+      text-align: right;
+      word-break: break-word;
+    }
+
+    .copy-btn {
+      border: 0;
+      margin-left: 5px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: rgba(59, 130, 246, .15);
+      color: #93c5fd;
+      font-size: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .copy-btn:hover {
+      background: rgba(59, 130, 246, .28);
+    }
+
+    .note {
+      color: #94a3b8;
+      font-size: 11px;
+      line-height: 1.5;
+      margin-top: 6px;
+    }
+
+    .summary-box {
+      margin-top: 5px;
+      margin-bottom: 20px;
+      padding: 16px;
+      border-radius: 14px;
+      background: #0a1626;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      color: #94a3b8;
+      font-size: 12px;
+    }
+
+    .summary-row span:last-child {
+      color: #e2e8f0;
+      font-weight: 700;
+    }
+
+    .summary-row:last-child {
+      margin-top: 6px;
+      padding-top: 13px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: white;
+      font-size: 13px;
+    }
+
+    .summary-row:last-child span:last-child {
+      color: #f5b942;
+      font-size: 16px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      border: 0;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      font-size: 14px;
+      font-weight: 750;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(37, 99, 235, .22);
+      transition: .25s ease;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 13px 28px rgba(37, 99, 235, .3);
+    }
+
+    .withdraw-section {
+      display: none;
+    }
+
+    .withdraw-section.active {
+      display: block;
+      animation: fadeIn .2s ease;
+    }
+
+    .toast-payment {
+      display: none;
+      margin: 15px 25px 0;
+      padding: 12px 14px;
+      border-radius: 11px;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .toast-payment.success {
+      display: block;
+      background: rgba(34, 197, 94, .1);
+      border: 1px solid rgba(34, 197, 94, .18);
+      color: #86efac;
+    }
+
+    .toast-payment.error {
+      display: block;
+      background: rgba(239, 68, 68, .1);
+      border: 1px solid rgba(239, 68, 68, .18);
+      color: #fca5a5;
+    }
+
+    .portal-footer {
+      padding: 16px 25px 21px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: #64748b;
+      font-size: 10px;
+    }
+
+    /* ======================================================
+       MINING DASHBOARD (HIDDEN - only shows on View click)
+       ====================================================== */
+    .mining-dashboard-wrapper {
+      background: #0a0e14;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px 16px;
+    }
+
+    .mining-card {
+      max-width: 420px;
+      width: 100%;
+      background: #121a24;
+      border-radius: 32px;
+      padding: 28px 22px 30px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      border: 1px solid #1f2a36;
+      position: relative;
+    }
+
+    .mining-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 22px;
+      width: 32px;
+      height: 32px;
+      background: #1a2533;
+      border: 1px solid #2a3a4a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8a9aa8;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .mining-close-btn:hover {
+      background: #253346;
+      color: #ffffff;
+      border-color: #3f5266;
+    }
+
+    .no-plan-warning {
+      background: #1a2533;
+      border: 1px solid #f5c842;
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      display: none;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .no-plan-warning.show {
+      display: flex;
+    }
+
+    .no-plan-warning .warning-icon {
+      color: #f5c842;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .no-plan-warning .warning-text {
+      color: #d0dce8;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .no-plan-warning .warning-text small {
+      color: #8a9aa8;
+      font-weight: 400;
+      display: block;
+      font-size: 11px;
+      margin-top: 2px;
+    }
+
+    .balance-label-mining {
+      font-size: 14px;
+      color: #8a9aa8;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      margin-bottom: 4px;
+    }
+
+    .balance-row-mining {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .balance-value-mining {
+      font-size: 28px;
+      font-weight: 700;
+      color: #f5c842;
+      letter-spacing: 0.5px;
+    }
+
+    .balance-value-mining .btc-symbol {
+      font-size: 22px;
+      font-weight: 600;
+      color: #f5c842;
+      margin-right: 2px;
+    }
+
+    .balance-sub-mining {
+      font-size: 13px;
+      color: #5f7387;
+      font-weight: 400;
+      margin-top: -2px;
+    }
+
+    .balance-sub-mining span {
+      background: #1a2533;
+      padding: 2px 12px;
+      border-radius: 30px;
+      font-size: 11px;
+      color: #8fa0b0;
+    }
+
+    .divider-mining {
+      border: none;
+      height: 1px;
+      background: #1f2a36;
+      margin: 16px 0 18px;
+    }
+
+    .mining-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+
+    .mining-label {
+      font-size: 14px;
+      color: #8a9aa8;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .mining-speed {
+      font-size: 26px;
+      font-weight: 700;
+      color: #e8edf2;
+      letter-spacing: 0.5px;
+    }
+
+    .mining-speed .unit {
+      font-size: 15px;
+      font-weight: 500;
+      color: #8a9aa8;
+      margin-left: 4px;
+    }
+
+    .coin-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1a2533;
+      padding: 6px 16px 6px 14px;
+      border-radius: 30px;
+      border: 1px solid #2a3a4a;
+    }
+
+    .coin-badge .coin-icon {
+      width: 18px;
+      height: 18px;
+      background: #f5c842;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+    }
+
+    .coin-badge .coin-icon::after {
+      content: '₿';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 10px;
+      color: #121a24;
+      font-weight: 700;
+    }
+
+    .coin-badge span {
+      color: #d0dce8;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .speed-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+    }
+
+    .btc-rate-mining {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      background: #0f1822;
+      padding: 8px 16px;
+      border-radius: 30px;
+      margin: 14px 0 18px;
+      border: 1px solid #1f2a36;
+      flex: 1;
+    }
+
+    .btc-rate-mining .rate-label {
+      font-size: 13px;
+      color: #7a8d9e;
+    }
+
+    .btc-rate-mining .rate-value {
+      font-size: 18px;
+      font-weight: 600;
+      color: #d0dce8;
+    }
+
+    .btc-rate-mining .rate-value small {
+      font-size: 13px;
+      font-weight: 400;
+      color: #7a8d9e;
+    }
+
+    .mining-active {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #0f1822;
+      padding: 6px 14px 6px 12px;
+      border-radius: 30px;
+      border: 1px solid #1f2a36;
+      font-size: 13px;
+      color: #6fdfa0;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .mining-active .dot {
+      width: 8px;
+      height: 8px;
+      background: #6fdfa0;
+      border-radius: 50%;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    .mining-active.inactive {
+      color: #8a9aa8;
+    }
+
+    .mining-active.inactive .dot {
+      background: #5f7387;
+      animation: none;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+      100% { opacity: 0.3; transform: scale(0.8); }
+    }
+
+    .daily-limit {
+      background: #0f1822;
+      border-radius: 20px;
+      padding: 16px 18px 18px;
+      border: 1px solid #1f2a36;
+      margin-top: 4px;
+    }
+
+    .limit-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .limit-label {
+      font-size: 14px;
+      color: #8a9aa8;
+      font-weight: 500;
+    }
+
+    .limit-time {
+      font-size: 18px;
+      font-weight: 600;
+      color: #d0dce8;
+      background: #1a2533;
+      padding: 2px 14px;
+      border-radius: 30px;
+      border: 1px solid #2a3a4a;
+    }
+
+    .progress-bar {
+      background: #1a2533;
+      height: 6px;
+      border-radius: 20px;
+      margin: 10px 0 6px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      width: 9.3%;
+      height: 100%;
+      background: linear-gradient(90deg, #f5c842, #f7d875);
+      border-radius: 20px;
+      transition: width 0.5s ease;
+    }
+
+    .limit-footer {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 11px;
+      color: #5f7387;
+    }
+
+    .limit-footer span {
+      background: #1a2533;
+      padding: 2px 12px;
+      border-radius: 30px;
+    }
+
+    .bottom-row-mining {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+      font-size: 11px;
+      color: #3f5266;
+      letter-spacing: 0.3px;
+    }
+
+    .bottom-row-mining span {
+      background: #0f1822;
+      padding: 3px 12px;
+      border-radius: 30px;
+      border: 1px solid #1a2533;
+    }
+
+    .mine-btn {
+      width: 100%;
+      padding: 14px;
+      margin-top: 18px;
+      border: none;
+      border-radius: 60px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #121a24;
+      background: linear-gradient(135deg, #f5c842, #f7d875);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(245, 200, 66, 0.3);
+      letter-spacing: 0.5px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mine-btn:hover:not(:disabled) {
+      transform: scale(1.02);
+      box-shadow: 0 6px 30px rgba(245, 200, 66, 0.5);
+    }
+
+    .mine-btn:active:not(:disabled) {
+      transform: scale(0.97);
+    }
+
+    .mine-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    .mine-btn.mining {
+      background: linear-gradient(135deg, #4a6a5a, #2d4a3a);
+      color: #6fdfa0;
+      box-shadow: 0 4px 20px rgba(111, 223, 160, 0.2);
+    }
+
+    .mine-btn.mining:hover:not(:disabled) {
+      box-shadow: 0 6px 30px rgba(111, 223, 160, 0.3);
+    }
+
+    .mine-btn .btn-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mine-btn .spinner {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(111, 223, 160, 0.3);
+      border-top: 3px solid #6fdfa0;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    .mine-btn.mining .spinner {
+      display: inline-block;
+    }
+
+    .mine-btn.mining .btn-text {
+      color: #6fdfa0;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .status-row-mining {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin: 14px 0 18px;
+    }
+
+    .plan-info-mining {
+      background: #0f1822;
+      border: 1px solid #1f2a36;
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 12px;
+      display: none;
+    }
+
+    .plan-info-mining.show {
+      display: block;
+    }
+
+    .plan-info-mining .plan-name {
+      color: #f5c842;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .plan-info-mining .plan-details {
+      color: #8a9aa8;
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .plan-info-mining .plan-details span {
+      color: #d0dce8;
+      font-weight: 600;
+    }
+
     .auth-modal-overlay {
       position: fixed;
       top: 0;
@@ -1599,7 +2632,7 @@
       margin-bottom: 6px;
     }
 
-    label {
+    .auth-card label {
       font-size: 14px;
       font-weight: 600;
       color: var(--text-main);
@@ -1686,19 +2719,22 @@
       .db-controls { width: 100%; justify-content: center; }
       .db-profile-top { flex-wrap: wrap; }
       .db-profile-toggle { margin-left: auto; }
+      .payment-modal-content { max-height: 95vh; border-radius: 16px; }
+      .payment-card { border-radius: 16px; }
+      .tabs { flex-direction: row; }
+      .mining-card { border-radius: 24px; padding: 22px 16px 24px; }
+      .db-active-plans-header { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Dashboard ID Banner (shown after login) -->
   <div class="dashboard-id-banner" id="dashboardBanner">
     🔑 Your unique ID: <span id="userIdDisplay">---</span> &nbsp;|&nbsp; Welcome, <span id="userNameDisplay">User</span>
   </div>
 
   <!-- MAIN HOME PAGE VIEW -->
   <div id="homePageView" class="page-view active-view">
-    <!-- HERO SECTION -->
     <section class="hero-banner">
       <nav class="navbar">
         <div class="nav-left-group">
@@ -1714,7 +2750,6 @@
         </a>
       </nav>
 
-      <!-- Side Navigation Drawer -->
       <div class="nav-drawer" id="navDrawer">
         <div class="drawer-header">
           <a href="#" class="brand-container">
@@ -1730,7 +2765,6 @@
 
         <ul class="nav-links">
           <li><a href="#" onclick="showPageView('homePageView'); closeMenu();">Home</a></li>
-          <!-- Nav links revealed after verification -->
           <li id="navAccountLi" class="hidden"><a href="#" onclick="showPageView('accountPageView'); closeMenu();">Account</a></li>
           <li id="navInvestmentPlansLi" class="hidden"><a href="#" onclick="showPageView('investmentPlansSection'); closeMenu();">Investment Plans</a></li>
           <li><a href="#" id="sideAuthBtn">Sign Up / Login</a></li>
@@ -1744,13 +2778,12 @@
         <p class="subtitle">Try bitfly mining and validate your own blocks on the blockchain</p>
         <h1 class="main-title">bitfly <span class="gold-text">mining</span></h1>
         <p class="description">The world's most innovative, unique and simple way to mine crypto. Start your one-click crypto mining journey today.</p>
-       <button class="glow-button" id="startNowBtn" onclick="showPageView('investmentPlansSection')">
-  Start Now
-</button>
+        <button class="glow-button" id="startNowBtn" onclick="showPageView('investmentPlansSection')">
+          Start Now
+        </button>
       </div>
     </section>
 
-    <!-- INTRO -->
     <div class="intro-wrapper">
       <section class="intro-section">
         <h3>bitfly mining</h3>
@@ -1760,7 +2793,6 @@
       </section>
     </div>
 
-    <!-- WHY CHOOSE US -->
     <section class="why-choose-us">
       <h2 class="why-choose-us-title">Why Choose Us</h2>
       <div class="cards-grid">
@@ -1782,7 +2814,6 @@
       </div>
     </section>
 
-    <!-- FINANCIAL CALCULATOR -->
     <section class="financial-calculator">
       <div class="calculator-container">
         <div class="calculator-heading">
@@ -1856,7 +2887,6 @@
       </div>
     </section>
 
-    <!-- COMPARISON SECTION -->
     <div class="comparison-wrapper">
       <div class="comparison-container">
         <div class="comparison-card comparison-card-top">
@@ -1879,7 +2909,6 @@
       </div>
     </div>
 
-    <!-- REFERRAL PROGRAM SECTION -->
     <section class="referral-section" id="referralProgramSection">
       <div class="referral-container">
         <span class="referral-tag">BOOST YOUR EARNINGS</span>
@@ -1914,7 +2943,6 @@
           </div>
         </div>
 
-        <!-- Dynamic referral link display — initially hidden, shown after login -->
         <div class="referral-link-box hidden" id="referralLinkBox">
           <div class="referral-link-label">Your unique referral link</div>
           <div class="referral-link-row">
@@ -1927,7 +2955,6 @@
           </div>
         </div>
 
-        <!-- CTA button — disappears after login -->
         <div class="referral-cta" id="referralCtaBox" style="margin-top:28px;">
           <button class="referral-btn" id="getReferralLinkBtn" onclick="openAuthModal('signup')">Get Your Referral Link</button>
         </div>
@@ -1946,42 +2973,42 @@
       </div>
 
       <div class="plans">
-        <div class="plan" onclick="selectPlan('Starter', '2.0% / day', 'FCFA 3,000', 'Starter investment plan', ['Instant activation', 'Daily account updates', 'Customer support'], event)">
+        <div class="plan" onclick="selectPlan('Starter', '2.0% / day', 'FCFA 3,000', 'Starter investment plan', ['Instant activation', 'Daily account updates', 'Customer support'], event, 3000, 2.0)">
           <div class="plan-icon"><img src="https://i.postimg.cc/TymLy4wq/D897ACCA-37DF-41B9-BC96-C97157230975.jpg" alt="Starter Plan Icon"></div>
           <h3>Starter</h3><p>Starter investment plan</p>
           <div class="return"><strong>2.0% / day</strong></div>
           <button class="choose-btn">View Plan</button>
         </div>
 
-        <div class="plan" onclick="selectPlan('Regular', '4.2% / day', 'FCFA 5,000', 'Standard investment plan', ['Instant activation', 'Daily account updates', 'Customer support'], event)">
+        <div class="plan" onclick="selectPlan('Regular', '4.2% / day', 'FCFA 5,000', 'Standard investment plan', ['Instant activation', 'Daily account updates', 'Customer support'], event, 5000, 4.2)">
           <div class="plan-icon"><img src="https://i.postimg.cc/Kk2KtDkB/D897ACCA-37DF-41B9-BC96-C97157230975.jpg" alt="Regular Plan Icon"></div>
           <h3>Regular</h3><p>Standard investment plan</p>
           <div class="return"><strong>4.2% / day</strong></div>
           <button class="choose-btn">View Plan</button>
         </div>
 
-        <div class="plan" onclick="selectPlan('Pro', '8.82% / day', 'FCFA 10,000', 'Advanced investment plan', ['Priority support', 'Account monitoring', 'Exclusive updates'], event)">
+        <div class="plan" onclick="selectPlan('Pro', '8.82% / day', 'FCFA 10,000', 'Advanced investment plan', ['Priority support', 'Account monitoring', 'Exclusive updates'], event, 10000, 8.82)">
           <div class="plan-icon"><img src="https://i.postimg.cc/06mM6BQZ/D897ACCA-37DF-41B9-BC96-C97157230975.jpg" alt="Pro Plan Icon"></div>
           <h3>Pro</h3><p>Advanced investment plan</p>
           <div class="return"><strong>8.82% / day</strong></div>
           <button class="choose-btn">View Plan</button>
         </div>
 
-        <div class="plan" onclick="selectPlan('Elite', '12.0% / day', 'FCFA 30,000', 'Premium investment plan', ['Priority support', 'Exclusive updates', 'Advanced account features'], event)">
+        <div class="plan" onclick="selectPlan('Elite', '12.0% / day', 'FCFA 30,000', 'Premium investment plan', ['Priority support', 'Exclusive updates', 'Advanced account features'], event, 30000, 12.0)">
           <div class="plan-icon"><img src="https://i.postimg.cc/LYpqj3Yf/D897ACCA-37DF-41B9-BC96-C97157230975.jpg" alt="Elite Plan Icon"></div>
           <h3>Elite</h3><p>Premium investment plan</p>
           <div class="return"><strong>12.0% / day</strong></div>
           <button class="choose-btn">View Plan</button>
         </div>
 
-        <div class="plan" onclick="selectPlan('Premium', '18.0% / day', 'FCFA 90,000', 'Highest-tier investment plan', ['VIP support', 'Exclusive updates', 'Premium account features'], event)">
+        <div class="plan" onclick="selectPlan('Premium', '18.0% / day', 'FCFA 90,000', 'Highest-tier investment plan', ['VIP support', 'Exclusive updates', 'Premium account features'], event, 90000, 18.0)">
           <div class="plan-icon"><img src="https://i.postimg.cc/TL6ynJLD/D897ACCA-37DF-41B9-BC96-C97157230975.jpg" alt="Premium Plan Icon"></div>
           <h3>Premium</h3><p>Highest-tier investment plan</p>
           <div class="return"><strong>18.0% / day</strong></div>
           <button class="choose-btn">View Plan</button>
         </div>
 
-        <div class="plan" onclick="selectPlan('Ultimate', '20.0% / day', 'FCFA 200,000', 'Ultimate-tier investment plan', ['VIP support', 'Dedicated Manager', 'Premium account features'], event)">
+        <div class="plan" onclick="selectPlan('Ultimate', '20.0% / day', 'FCFA 200,000', 'Ultimate-tier investment plan', ['VIP support', 'Dedicated Manager', 'Premium account features'], event, 200000, 20.0)">
           <div class="plan-icon"><img src="https://i.postimg.cc/WFvD0wFG/D897ACCA-37DF-41B9-BC96-C97157230975.jpg" alt="Ultimate Plan Icon"></div>
           <h3>Ultimate</h3><p>Ultimate-tier investment plan</p>
           <div class="return"><strong>20.0% / day</strong></div>
@@ -1995,12 +3022,12 @@
         <div class="big-return" id="detailReturn"></div>
         <p style="margin-top: 8px;">Minimum investment: <strong id="detailMinimum"></strong></p>
         <ul class="features" id="detailFeatures"></ul>
-        <button class="confirm-btn" onclick="continuePlan()">Continue</button>
+        <button class="confirm-btn" onclick="continuePlan()">Activate Plan & Start Mining</button>
       </div>
     </div>
   </div>
 
-  <!-- NEW ACCOUNT DASHBOARD PAGE VIEW -->
+  <!-- ACCOUNT DASHBOARD PAGE VIEW -->
   <div id="accountPageView" class="page-view account-dashboard-wrapper">
     <div class="account-dashboard">
       <header class="db-header">
@@ -2012,6 +3039,10 @@
         <div class="db-controls">
           <button class="db-home-btn" onclick="showPageView('homePageView')" title="Return Home">
             <i class="fa-solid fa-house"></i>
+          </button>
+
+          <button class="db-home-btn" onclick="loadAccountData()" title="Refresh Balance">
+            <i class="fa-solid fa-rotate"></i>
           </button>
 
           <select id="dbLangSelect" class="db-lang-select" onchange="changeDashboardLanguage(this.value)">
@@ -2056,12 +3087,12 @@
         <div class="db-balance-label" id="dbBalanceLabel">Total Account Balance</div>
         <div class="db-balance-amount" id="dbAccountBalance">$0.00</div>
         <div class="db-action-buttons">
-          <a href="payment.html" class="db-btn db-btn-gold">
+          <button class="db-btn db-btn-gold" onclick="openPaymentModal('deposit')">
             <i class="fa-solid fa-wallet"></i><span id="dbDepositText">Deposit</span>
-          </a>
-          <a href="payment.html" class="db-btn db-btn-outline">
+          </button>
+          <button class="db-btn db-btn-outline" onclick="openPaymentModal('withdraw')">
             <i class="fa-solid fa-arrow-up-right-from-square"></i><span id="dbWithdrawText">Withdraw</span>
-          </a>
+          </button>
         </div>
       </section>
 
@@ -2069,15 +3100,15 @@
         <div class="db-stat-card">
           <div class="db-stat-icon"><i class="fa-solid fa-microchip"></i></div>
           <div class="db-stat-info">
-            <h4 id="dbActiveMinersText">Active Hashrate</h4><p>0.00 TH/s</p>
+            <h4 id="dbActiveMinersText">Active Hashrate</h4><p id="dbHashrateValue">0.00 TH/s</p>
           </div>
-          <button class="db-view-btn" onclick="showPageView('investmentPlansSection')">View</button>
+          <button class="db-view-btn" onclick="showMiningDashboard()">View</button>
         </div>
 
         <div class="db-stat-card">
           <div class="db-stat-icon"><i class="fa-solid fa-chart-line"></i></div>
           <div class="db-stat-info">
-            <h4 id="dbDailyEarningsText">Est. Daily Earnings</h4><p>$0.00</p>
+            <h4 id="dbDailyEarningsText">Est. Daily Earnings</h4><p id="dbDailyEarningsValue">$0.00</p>
           </div>
         </div>
 
@@ -2088,6 +3119,282 @@
           </div>
         </div>
       </section>
+
+      <section class="db-active-plans" id="dbActivePlansSection">
+        <div class="db-active-plans-header">
+          <h3><i class="fa-solid fa-layer-group"></i> Active Investment Plans</h3>
+          <span class="db-active-plans-count" id="dbActivePlansCount">0 Plans</span>
+        </div>
+        <div class="db-plans-list" id="dbPlansList">
+          <div class="db-empty-plans">
+            <i class="fa-solid fa-cube"></i>
+            <p>No active plans yet. Choose a plan to start mining.</p>
+            <button class="db-btn db-btn-gold" onclick="showPageView('investmentPlansSection')">Browse Plans</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- MINING DASHBOARD PAGE VIEW (hidden - only accessible via View button) -->
+  <div id="miningDashboardView" class="page-view mining-dashboard-wrapper">
+    <div class="mining-card">
+      <button class="mining-close-btn" onclick="showPageView('accountPageView')" title="Close">✕</button>
+
+      <div class="no-plan-warning" id="noPlanWarning">
+        <span class="warning-icon">⚠️</span>
+        <div class="warning-text">
+          No Mining Plan Selected
+          <small>Please select a plan from the Investment Plans page first</small>
+        </div>
+      </div>
+
+      <div class="plan-info-mining" id="planInfo">
+        <div class="plan-name" id="planNameDisplay">Starter Plan</div>
+        <div class="plan-details">
+          Rate: <span id="planRateDisplay">2.0%</span> daily &bull; 
+          Investment: <span id="planAmountDisplay">FCFA 3,000</span>
+        </div>
+      </div>
+
+      <div class="balance-label-mining">Your Balance</div>
+      <div class="balance-row-mining">
+        <span class="balance-value-mining"><span class="btc-symbol">₿</span><span id="miningBalanceDisplay">0.00000000500</span></span>
+        <span class="balance-sub-mining"><span>BTC</span></span>
+      </div>
+
+      <hr class="divider-mining">
+
+      <div class="mining-header">
+        <span class="mining-label">Mining Speed</span>
+        <div class="coin-badge">
+          <span class="coin-icon"></span>
+          <span>Coin</span>
+        </div>
+      </div>
+
+      <div class="speed-row">
+        <span class="mining-speed"><span id="miningSpeedDisplay">15.90</span> <span class="unit">TH/s</span></span>
+      </div>
+
+      <div class="status-row-mining">
+        <div class="btc-rate-mining" style="margin: 0;">
+          <span class="rate-label"></span>
+          <span class="rate-value"><span id="miningBtcRateDisplay">0.00000003529</span> <small>BTC</small></span>
+        </div>
+        <div class="mining-active" id="miningStatus">
+          <span class="dot" id="miningStatusDot"></span>
+          <span id="miningStatusText">Mining Stopped</span>
+        </div>
+      </div>
+
+      <div class="daily-limit">
+        <div class="limit-row">
+          <span class="limit-label">Daily Mining Limit</span>
+          <span class="limit-time" id="limitTime">03:10 / 34:00</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="limit-footer">
+          <span>min left</span>
+        </div>
+      </div>
+
+      <button class="mine-btn" id="mineButton" disabled>
+        <span class="btn-text">
+          <span class="spinner"></span>
+          <span id="buttonLabel">⛏️ Start mining</span>
+        </span>
+      </button>
+
+      <div class="bottom-row-mining">
+        <span>⚡ <span id="bottomBalanceMining">0.00000000500</span></span>
+        <span>₿ <span id="bottomSpeedMining">15.90</span> TH/s</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAYMENT PORTAL MODAL -->
+  <div class="payment-modal-overlay" id="paymentModalOverlay">
+    <div class="payment-modal-content">
+      <button class="payment-modal-close" onclick="closePaymentModal()" aria-label="Close payment portal">&times;</button>
+
+      <div class="payment-card">
+        <div class="portal-header">
+          <div class="brand-row">
+            <div class="payment-brand">
+              <div class="brand-icon">⇄</div>
+              <div class="payment-brand-text">
+                <h1>Payment Portal</h1>
+                <p>Secure deposit & withdrawal</p>
+              </div>
+            </div>
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              Secure
+            </div>
+          </div>
+
+          <div class="balance-card-payment">
+            <div class="balance-label-payment">Available Balance</div>
+            <div class="balance-value-payment" id="paymentModalBalance">$0.00</div>
+            <div class="balance-note-payment">Your available account balance</div>
+          </div>
+        </div>
+
+        <div class="tabs">
+          <button class="tab-btn active" id="depositTabBtn" onclick="switchPaymentTab('deposit')">Deposit</button>
+          <button class="tab-btn" id="withdrawTabBtn" onclick="switchPaymentTab('withdraw')">Withdraw</button>
+        </div>
+
+        <div id="paymentToast" class="toast-payment"></div>
+
+        <div id="deposit-tab" class="tab-content active">
+          <div class="section-title">
+            <h2>Make a Deposit</h2>
+            <p>Select your payment method and submit your transaction details.</p>
+          </div>
+
+          <form id="deposit-form" onsubmit="handleDeposit(event)">
+            <div class="form-group">
+              <label for="deposit-method">Payment Method</label>
+              <select id="deposit-method" onchange="updateDepositDetails()">
+                <option value="mtn">MTN Mobile Money</option>
+                <option value="orange">Orange Money</option>
+                <option value="btc">Bitcoin (BTC)</option>
+                <option value="usdt">USDT (TRC20)</option>
+                <option value="bank">Bank Wire Transfer</option>
+              </select>
+            </div>
+
+            <div class="deposit-info-box">
+              <div class="info-title">
+                <span class="info-title-icon">$</span>
+                PAYMENT INSTRUCTIONS
+              </div>
+              <div id="payment-details-content"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="deposit-amount">Amount Sent ($)</label>
+              <input type="number" id="deposit-amount" placeholder="0.00" min="10" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+              <label for="deposit-ref">Transaction ID / Reference / TxHash</label>
+              <input type="text" id="deposit-ref" placeholder="Enter transaction reference" required>
+              <p class="note">Enter the transaction reference or blockchain hash supplied by your payment provider.</p>
+            </div>
+
+            <button type="submit" class="submit-btn">Confirm Deposit</button>
+          </form>
+        </div>
+
+        <div id="withdraw-tab" class="tab-content">
+          <div class="section-title">
+            <h2>Withdraw Funds</h2>
+            <p>Choose your payout method and provide your receiving details.</p>
+          </div>
+
+          <form id="withdraw-form" onsubmit="handleWithdrawal(event)">
+            <div class="form-group">
+              <label for="withdraw-amount">Amount to Withdraw ($)</label>
+              <input type="number" id="withdraw-amount" placeholder="0.00" min="20" step="0.01" oninput="calculateWithdrawal()" required>
+            </div>
+
+            <div class="form-group">
+              <label for="withdraw-method">Payout Method</label>
+              <select id="withdraw-method" onchange="toggleWithdrawFields()">
+                <option value="mtn">MTN Mobile Money</option>
+                <option value="orange">Orange Money</option>
+                <option value="btc">Bitcoin (BTC)</option>
+                <option value="usdt">USDT (TRC20)</option>
+                <option value="bank">Bank Transfer</option>
+              </select>
+            </div>
+
+            <div id="sec-mtn" class="withdraw-section active">
+              <div class="form-group">
+                <label for="mtn-name">Account Name</label>
+                <input type="text" id="mtn-name" placeholder="Full name registered on MTN MoMo">
+              </div>
+              <div class="form-group">
+                <label for="mtn-phone">MTN Mobile Money Number</label>
+                <input type="tel" id="mtn-phone" placeholder="+237 670 000 000">
+              </div>
+            </div>
+
+            <div id="sec-orange" class="withdraw-section">
+              <div class="form-group">
+                <label for="orange-name">Account Name</label>
+                <input type="text" id="orange-name" placeholder="Full name registered on Orange Money">
+              </div>
+              <div class="form-group">
+                <label for="orange-phone">Orange Money Number</label>
+                <input type="tel" id="orange-phone" placeholder="+237 690 000 000">
+              </div>
+            </div>
+
+            <div id="sec-btc" class="withdraw-section">
+              <div class="form-group">
+                <label for="btc-addr">Bitcoin Address</label>
+                <input type="text" id="btc-addr" placeholder="bc1q...">
+                <p class="note">Use a valid Bitcoin network address.</p>
+              </div>
+            </div>
+
+            <div id="sec-usdt" class="withdraw-section">
+              <div class="form-group">
+                <label for="usdt-addr">USDT Wallet Address (TRC20)</label>
+                <input type="text" id="usdt-addr" placeholder="T...">
+              </div>
+            </div>
+
+            <div id="sec-bank" class="withdraw-section">
+              <div class="form-group">
+                <label for="acc-name">Account Holder Name</label>
+                <input type="text" id="acc-name" placeholder="Full account holder name">
+              </div>
+              <div class="form-group">
+                <label for="bank-name">Bank Name</label>
+                <input type="text" id="bank-name" placeholder="Bank name">
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <label for="acc-number">Account / IBAN</label>
+                  <input type="text" id="acc-number" placeholder="Account number">
+                </div>
+                <div class="form-group">
+                  <label for="swift">SWIFT / BIC</label>
+                  <input type="text" id="swift" placeholder="SWIFT code">
+                </div>
+              </div>
+            </div>
+
+            <div class="summary-box">
+              <div class="summary-row">
+                <span>Withdrawal Amount</span>
+                <span id="sum-amount">$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Processing Fee (2%)</span>
+                <span id="sum-fee">$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>You Receive</span>
+                <span id="sum-total">$0.00</span>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Request Withdrawal</button>
+          </form>
+        </div>
+
+        <div class="portal-footer">
+          Secure Payment Portal · All transactions are subject to verification
+        </div>
+      </div>
     </div>
   </div>
 
@@ -2189,29 +3496,26 @@
     const userIdDisplay = document.getElementById('userIdDisplay');
     const userNameDisplay = document.getElementById('userNameDisplay');
 
-    // Banner auto-hide timer
-    let bannerHideTimer = null;
-
-    // Profile More toggle state
     let profileMoreOpen = false;
-
-    // Track if user just signed up to control redirect
     let justSignedUp = false;
 
-    // Referral link elements
     const referralLinkBox = document.getElementById('referralLinkBox');
     const referralCtaBox = document.getElementById('referralCtaBox');
     const referralLinkInput = document.getElementById('referralLinkInput');
     const copyReferralBtn = document.getElementById('copyReferralBtn');
 
-    // Generate referral link from user ID
+    let currentUser = null;
+    let currentAccount = null;
+    let activePlans = [];
+    let selectedPlanForActivation = null;
+    let realtimeChannel = null;
+
     function generateReferralLink(userId) {
       if (!userId) return 'https://bitflymining.com/ref/...';
       const base = 'https://bitflymining.com/ref/';
       return base + userId.substring(0, 12);
     }
 
-    // Update referral link in the UI
     function updateReferralLink(user) {
       if (!referralLinkInput) return;
       if (!user || !user.id) {
@@ -2221,7 +3525,6 @@
       referralLinkInput.value = generateReferralLink(user.id);
     }
 
-    // Copy referral link
     if (copyReferralBtn) {
       copyReferralBtn.addEventListener('click', () => {
         if (!referralLinkInput) return;
@@ -2242,20 +3545,17 @@
       });
     }
 
-    // Toggle referral link visibility and CTA button
     function updateReferralUIVisibility(isLoggedIn) {
       if (isLoggedIn) {
-        // Show referral link box, hide CTA button
         if (referralLinkBox) referralLinkBox.classList.remove('hidden');
         if (referralCtaBox) referralCtaBox.style.display = 'none';
       } else {
-        // Hide referral link box, show CTA button
         if (referralLinkBox) referralLinkBox.classList.add('hidden');
         if (referralCtaBox) referralCtaBox.style.display = 'block';
       }
     }
 
-    // Navigation View Switcher
+    // Navigation View Switcher — refreshes account data when entering dashboard views
     function showPageView(viewId) {
       document.querySelectorAll('.page-view').forEach(view => {
         view.classList.remove('active-view');
@@ -2265,9 +3565,24 @@
         targetView.classList.add('active-view');
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // 🔄 Refresh account data whenever Account or Mining page is shown
+      if (viewId === 'accountPageView' || viewId === 'miningDashboardView') {
+        if (currentUser) {
+          loadAccountData().then(() => {
+            if (viewId === 'miningDashboardView') {
+              loadMiningDashboard();
+            }
+          });
+        }
+      }
     }
 
-    // Toggle Profile More Section
+    // Show mining dashboard (called by View button)
+    function showMiningDashboard() {
+      showPageView('miningDashboardView');
+    }
+
     function toggleProfileMore() {
       profileMoreOpen = !profileMoreOpen;
       const moreSection = document.getElementById('dbProfileMore');
@@ -2285,13 +3600,124 @@
       }
     }
 
-    // Unlock User Experience (show account dashboard, update referral UI)
+    // Load account data from Supabase (always fresh)
+    async function loadAccountData() {
+      if (!supabaseClient) return;
+
+      const { data: { user }, error: authError } = await supabaseClient.auth.getUser();
+      if (authError || !user) return;
+
+      currentUser = user;
+
+      const { data, error } = await supabaseClient
+        .from("users")
+        .select("id, name, email, phone, balance, plan, plans, status, created_at")
+        .eq("id", user.id)
+        .maybeSingle();
+
+      if (error) {
+        console.error("Error loading account:", error);
+        return;
+      }
+
+      if (data) {
+        currentAccount = data;
+        activePlans = Array.isArray(data.plans) ? data.plans : [];
+        
+        updateAccountUI();
+        renderActivePlans();
+
+        // Also update the mining dashboard if visible
+        if (document.getElementById('miningDashboardView')?.classList.contains('active-view')) {
+          loadMiningDashboard();
+        }
+      }
+    }
+
+    function updateAccountUI() {
+      if (!currentAccount) return;
+
+      const balance = Number(currentAccount.balance) || 0;
+      
+      const balanceElements = ["dbAccountBalance", "paymentModalBalance"];
+      balanceElements.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = `$${balance.toFixed(2)}`;
+      });
+
+      let totalHashrate = 0;
+      let totalDailyEarnings = 0;
+      
+      activePlans.forEach(plan => {
+        if (plan && plan.active) {
+          totalHashrate += plan.hashrate || 0;
+          totalDailyEarnings += plan.dailyEarning || 0;
+        }
+      });
+
+      const hashrateEl = document.getElementById("dbHashrateValue");
+      if (hashrateEl) {
+        hashrateEl.textContent = `${totalHashrate.toFixed(2)} TH/s`;
+      }
+
+      const dailyEarningsEl = document.getElementById("dbDailyEarningsValue");
+      if (dailyEarningsEl) {
+        dailyEarningsEl.textContent = `$${totalDailyEarnings.toFixed(2)}`;
+      }
+    }
+
+    function renderActivePlans() {
+      const plansList = document.getElementById("dbPlansList");
+      const plansCount = document.getElementById("dbActivePlansCount");
+      
+      if (!plansList) return;
+
+      const activeOnly = activePlans.filter(p => p && p.active);
+
+      if (plansCount) {
+        plansCount.textContent = `${activeOnly.length} Plan${activeOnly.length !== 1 ? 's' : ''}`;
+      }
+
+      if (activeOnly.length === 0) {
+        plansList.innerHTML = `
+          <div class="db-empty-plans">
+            <i class="fa-solid fa-cube"></i>
+            <p>No active plans yet. Choose a plan to start mining.</p>
+            <button class="db-btn db-btn-gold" onclick="showPageView('investmentPlansSection')">Browse Plans</button>
+          </div>
+        `;
+        return;
+      }
+
+      plansList.innerHTML = activeOnly.map(plan => `
+        <div class="db-plan-item">
+          <div class="db-plan-item-left">
+            <div class="db-plan-item-icon">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div class="db-plan-item-info">
+              <h4>${plan.name || 'Plan'}</h4>
+              <p>Activated: ${plan.activatedAt ? new Date(plan.activatedAt).toLocaleDateString() : 'N/A'}</p>
+            </div>
+          </div>
+          <div class="db-plan-item-right">
+            <div class="db-plan-item-return">
+              <div class="return-rate">${plan.rate || '0%'}</div>
+              <div class="return-investment">FCFA ${(plan.investment || 0).toLocaleString()}</div>
+            </div>
+            <span class="db-plan-status-badge">Active</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
     async function unlockUserExperience(user) {
       if (!user) {
         lockUserExperience();
         return;
       }
 
+      currentUser = user;
       const userId = user.id;
       const email = user.email || "";
       const metadata = user.user_metadata || {};
@@ -2299,7 +3725,6 @@
       const name = metadata.full_name || "";
       const phone = metadata.phone || "";
 
-      // Update UI elements
       const nameElement = document.getElementById("dbProfileName");
       const idElement = document.getElementById("dbProfileId");
       const emailElement = document.getElementById("dbProfileEmail");
@@ -2320,48 +3745,87 @@
         }
       }
 
-      // Update referral link and visibility
       updateReferralLink(user);
       updateReferralUIVisibility(true);
 
-// Show Account and Investment Plans navigation links
-const navAccountLi = document.getElementById("navAccountLi");
-const navInvestmentPlansLi = document.getElementById("navInvestmentPlansLi");
+      const navAccountLi = document.getElementById("navAccountLi");
+      const navInvestmentPlansLi = document.getElementById("navInvestmentPlansLi");
 
-if (navAccountLi) {
-  navAccountLi.classList.remove("hidden");
-}
+      if (navAccountLi) navAccountLi.classList.remove("hidden");
+      if (navInvestmentPlansLi) navInvestmentPlansLi.classList.remove("hidden");
 
-if (navInvestmentPlansLi) {
-  navInvestmentPlansLi.classList.remove("hidden");
-}
+      await loadAccountData();
+      showPageView("accountPageView");
 
-// Show account page
-showPageView("homePageView");
-}
+      // Subscribe to real-time updates
+      subscribeToUserChanges(userId);
+    }
+
     function lockUserExperience() {
-      // Clear user info
+      currentUser = null;
+      currentAccount = null;
+      activePlans = [];
+
       const fields = ["dbProfileName","dbProfileId","dbProfileEmail","dbProfilePhone","dbProfileAvatar","dbAccountBalance"];
       fields.forEach(id => {
         const element = document.getElementById(id);
         if (element) element.textContent = (id === "dbProfileAvatar" ? "?" : "");
       });
 
-      // Hide account-only nav
-      document.querySelectorAll(".account-only").forEach(el => el.style.display = "none");
-      document.querySelectorAll(".login-only").forEach(el => el.style.display = "");
-
-      // Reset referral UI: hide link, show CTA
       updateReferralUIVisibility(false);
       if (referralLinkInput) referralLinkInput.value = 'https://bitflymining.com/ref/...';
 
-      // Show home page
+      // Unsubscribe from realtime
+      if (realtimeChannel) {
+        supabaseClient.removeChannel(realtimeChannel);
+        realtimeChannel = null;
+      }
+
       showPageView("homePageView");
+    }
+
+    // 🔄 Real-time listener for user record changes
+    function subscribeToUserChanges(userId) {
+      if (realtimeChannel) {
+        supabaseClient.removeChannel(realtimeChannel);
+        realtimeChannel = null;
+      }
+
+      if (!userId) return;
+
+      realtimeChannel = supabaseClient
+        .channel('user-record-' + userId)
+        .on(
+          'postgres_changes',
+          {
+            event: 'UPDATE',
+            schema: 'public',
+            table: 'users',
+            filter: `id=eq.${userId}`
+          },
+          (payload) => {
+            console.log('Real-time update received:', payload.new);
+            
+            if (payload.new) {
+              currentAccount = { ...currentAccount, ...payload.new };
+              activePlans = Array.isArray(payload.new.plans) ? payload.new.plans : activePlans;
+              
+              updateAccountUI();
+              renderActivePlans();
+              
+              if (document.getElementById('miningDashboardView')?.classList.contains('active-view')) {
+                loadMiningDashboard();
+              }
+            }
+          }
+        )
+        .subscribe((status) => {
+          console.log('Realtime subscription status:', status);
+        });
     }
 
     // Auth state listener
     if (supabaseClient) {
-      // Check session on load
       supabaseClient.auth.getSession().then(({ data: { session }, error }) => {
         if (error) {
           console.error("Session error:", error);
@@ -2375,7 +3839,6 @@ showPageView("homePageView");
         }
       });
 
-      // Listen for changes
       supabaseClient.auth.onAuthStateChange(async (event, session) => {
         if (session && session.user) {
           setTimeout(() => {
@@ -2386,13 +3849,11 @@ showPageView("homePageView");
         }
       });
 
-      // Sidebar auth button
       document.getElementById('sideAuthBtn')?.addEventListener('click', (e) => {
         e.preventDefault();
         openAuthModal('signup');
       });
 
-      // Signup form
       document.getElementById('signupForm').addEventListener('submit', async (e) => {
         e.preventDefault();
         const email = document.getElementById('signUpEmail').value;
@@ -2413,11 +3874,9 @@ showPageView("homePageView");
         } else {
           alert('Registration successful!');
           closeAuthModal();
-          // Auth state change will handle dashboard and referral UI
         }
       });
 
-      // Login form
       document.getElementById('loginForm').addEventListener('submit', async (e) => {
         e.preventDefault();
         const email = document.getElementById('loginEmail').value;
@@ -2434,7 +3893,7 @@ showPageView("homePageView");
       });
     }
 
-    /* Side Drawer Navigation Logic */
+    /* Side Drawer */
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const closeBtn = document.getElementById('closeBtn');
     const navDrawer = document.getElementById('navDrawer');
@@ -2454,9 +3913,8 @@ showPageView("homePageView");
     closeBtn.addEventListener('click', closeMenu);
     drawerOverlay.addEventListener('click', closeMenu);
 
-    /* Auth Modal Toggle Logic */
+    /* Auth Modal */
     const authModal = document.getElementById('authModal');
-    const startNowBtn = document.getElementById('startNowBtn');
 
     function openAuthModal(defaultView = 'signup') {
       toggleView(defaultView);
@@ -2481,8 +3939,8 @@ showPageView("homePageView");
       }
     }
 
-    /* Investment Plans Functions */
-    function selectPlan(name, returnRate, minimum, description, features, evt) {
+    /* Investment Plans */
+    function selectPlan(name, returnRate, minimum, description, features, evt, investmentAmount, ratePercent) {
       document.querySelectorAll(".plan").forEach(function(card) {
         card.classList.remove("active");
       });
@@ -2504,28 +3962,160 @@ showPageView("homePageView");
         featureList.appendChild(li);
       });
 
+      selectedPlanForActivation = {
+        name: name,
+        rate: returnRate,
+        ratePercent: ratePercent,
+        investment: investmentAmount,
+        hashrate: investmentAmount / 200,
+        dailyEarning: (investmentAmount * ratePercent / 100) / 500
+      };
+
       const detailsContainer = document.getElementById("planDetails");
       detailsContainer.classList.add("show");
       detailsContainer.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
-    function continuePlan() {
-      const activeCard = document.querySelector(".plan.active");
-      if (!activeCard) {
+    // Activate plan — deduct balance and redirect to mining dashboard
+    async function continuePlan() {
+      if (!selectedPlanForActivation) {
         alert("Please select a plan first.");
         return;
       }
 
-      const planName = document.getElementById("detailName").textContent;
-      const planPrice = document.getElementById("detailMinimum").textContent;
+      if (!currentUser || !currentAccount) {
+        alert("Please log in to activate a plan.");
+        openAuthModal('login');
+        return;
+      }
 
-      localStorage.setItem("selectedPlanName", planName);
-      localStorage.setItem("selectedPlanPrice", planPrice);
+      const plan = selectedPlanForActivation;
+      const balance = Number(currentAccount.balance) || 0;
 
-      window.location.href = "payment.html";
+      if (balance < plan.investment) {
+        const shortfall = plan.investment - balance;
+        alert(`Insufficient balance.\n\nPlan cost: FCFA ${plan.investment.toLocaleString()}\nYour balance: FCFA ${balance.toLocaleString()}\nShortfall: FCFA ${shortfall.toLocaleString()}\n\nPlease deposit funds to activate this plan.`);
+        openPaymentModal('deposit');
+        return;
+      }
+
+      const newBalance = balance - plan.investment;
+
+      const newPlan = {
+        id: 'plan_' + Date.now(),
+        name: plan.name,
+        rate: plan.rate,
+        ratePercent: plan.ratePercent,
+        investment: plan.investment,
+        hashrate: plan.hashrate,
+        dailyEarning: plan.dailyEarning,
+        activatedAt: new Date().toISOString(),
+        active: true
+      };
+
+      activePlans.push(newPlan);
+
+      try {
+        const { error: updateError } = await supabaseClient
+          .from("users")
+          .update({ 
+            balance: newBalance,
+            plans: activePlans,
+            plan: plan.name
+          })
+          .eq("id", currentUser.id);
+
+        if (updateError) throw updateError;
+
+        currentAccount.balance = newBalance;
+        currentAccount.plans = activePlans;
+
+        updateAccountUI();
+        renderActivePlans();
+
+        alert(`✅ ${plan.name} Plan activated successfully!\n\nFCFA ${plan.investment.toLocaleString()} deducted from your balance.\nNew balance: FCFA ${newBalance.toLocaleString()}`);
+
+        await loadMiningDashboard();
+        showPageView('miningDashboardView');
+
+      } catch (error) {
+        console.error("Error activating plan:", error);
+        alert("Failed to activate plan. Please try again.");
+        activePlans = activePlans.filter(p => p.id !== newPlan.id);
+      }
+
+      selectedPlanForActivation = null;
     }
 
-    /* Calculator Logic */
+    // Load mining dashboard with active plans
+    async function loadMiningDashboard() {
+      if (!currentAccount) return;
+
+      const balance = Number(currentAccount.balance) || 0;
+      
+      let totalHashrate = 0;
+      let totalDailyEarning = 0;
+      let latestPlan = null;
+
+      activePlans.forEach(plan => {
+        if (plan && plan.active) {
+          totalHashrate += plan.hashrate || 0;
+          totalDailyEarning += plan.dailyEarning || 0;
+          latestPlan = plan;
+        }
+      });
+
+      const miningBalanceDisplay = document.getElementById("miningBalanceDisplay");
+      const bottomBalanceMining = document.getElementById("bottomBalanceMining");
+      const miningSpeedDisplay = document.getElementById("miningSpeedDisplay");
+      const bottomSpeedMining = document.getElementById("bottomSpeedMining");
+      const miningBtcRateDisplay = document.getElementById("miningBtcRateDisplay");
+      
+      if (miningBalanceDisplay) {
+        miningBalanceDisplay.textContent = (balance / 500000).toFixed(11);
+      }
+      
+      if (bottomBalanceMining) {
+        bottomBalanceMining.textContent = (balance / 500000).toFixed(11);
+      }
+
+      if (miningSpeedDisplay) {
+        miningSpeedDisplay.textContent = totalHashrate.toFixed(2);
+      }
+
+      if (bottomSpeedMining) {
+        bottomSpeedMining.textContent = totalHashrate.toFixed(2);
+      }
+
+      if (miningBtcRateDisplay) {
+        miningBtcRateDisplay.textContent = (totalDailyEarning / 500000).toFixed(11);
+      }
+
+      const planInfo = document.getElementById("planInfo");
+      const planNameDisplay = document.getElementById("planNameDisplay");
+      const planRateDisplay = document.getElementById("planRateDisplay");
+      const planAmountDisplay = document.getElementById("planAmountDisplay");
+      const noPlanWarning = document.getElementById("noPlanWarning");
+
+      if (activePlans.length > 0 && latestPlan) {
+        if (noPlanWarning) noPlanWarning.classList.remove("show");
+        if (planInfo) planInfo.classList.add("show");
+        if (planNameDisplay) planNameDisplay.textContent = latestPlan.name + " Plan";
+        if (planRateDisplay) planRateDisplay.textContent = latestPlan.rate || "2.0%";
+        if (planAmountDisplay) planAmountDisplay.textContent = "FCFA " + (latestPlan.investment || 0).toLocaleString();
+        
+        const mineButton = document.getElementById("mineButton");
+        if (mineButton) mineButton.disabled = false;
+      } else {
+        if (noPlanWarning) noPlanWarning.classList.add("show");
+        if (planInfo) planInfo.classList.remove("show");
+        
+        const mineButton = document.getElementById("mineButton");
+        if (mineButton) mineButton.disabled = true;
+      }
+    }
+
+    /* Calculator */
     let homeCalcRate = 2.0;
     const DURATION_DAYS = 20;
 
@@ -2563,7 +4153,6 @@ showPageView("homePageView");
       return "FCFA " + Math.round(value).toLocaleString("fr-FR");
     }
 
-    /* Dashboard Dark/Light Theme Toggle */
     function toggleDashboardTheme() {
       const currentTheme = document.documentElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -2575,7 +4164,6 @@ showPageView("homePageView");
       }
     }
 
-    /* Dashboard Language Functions */
     const dbTranslations = {
       en: { balanceLabel: "Total Account Balance", deposit: "Deposit", withdraw: "Withdraw", activeMiners: "Active Hashrate", dailyEarnings: "Est. Daily Earnings", totalWithdrawn: "Total Withdrawn", more: "More", less: "Less" },
       es: { balanceLabel: "Saldo Total de la Cuenta", deposit: "Depositar", withdraw: "Retirar", activeMiners: "Tasa de Hash Activa", dailyEarnings: "Ganancias Diarias Est.", totalWithdrawn: "Total Retirado", more: "Más", less: "Menos" },
@@ -2599,9 +4187,286 @@ showPageView("homePageView");
       }
     }
 
-    // Initialize calculator and UI state
+    /* Payment Portal */
+    const paymentModalOverlay = document.getElementById('paymentModalOverlay');
+    const paymentToast = document.getElementById('paymentToast');
+
+    function openPaymentModal(tab = 'deposit') {
+      paymentModalOverlay.classList.add('active');
+      switchPaymentTab(tab);
+      document.body.style.overflow = 'hidden';
+      
+      if (currentAccount) {
+        const balanceEl = document.getElementById('paymentModalBalance');
+        if (balanceEl) {
+          balanceEl.textContent = `$${(Number(currentAccount.balance) || 0).toFixed(2)}`;
+        }
+      }
+    }
+
+    function closePaymentModal() {
+      paymentModalOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+      hidePaymentToast();
+    }
+
+    function switchPaymentTab(tabName) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+      if (tabName === 'deposit') {
+        document.getElementById('depositTabBtn').classList.add('active');
+        document.getElementById('deposit-tab').classList.add('active');
+      } else {
+        document.getElementById('withdrawTabBtn').classList.add('active');
+        document.getElementById('withdraw-tab').classList.add('active');
+      }
+      hidePaymentToast();
+    }
+
+    const paymentDetailsData = {
+      mtn: `
+        <div class="info-row">
+          <span class="info-label">Merchant Name</span>
+          <span class="info-value">Company Payments</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">MoMo Number</span>
+          <span class="info-value">
+            +237 670 000 000
+            <button type="button" class="copy-btn" onclick="copyText('+237670000000')">Copy</button>
+          </span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Reference</span>
+          <span class="info-value">Include your email</span>
+        </div>
+      `,
+      orange: `
+        <div class="info-row">
+          <span class="info-label">Merchant Name</span>
+          <span class="info-value">Company Payments</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Orange Number</span>
+          <span class="info-value">
+            +237 690 000 000
+            <button type="button" class="copy-btn" onclick="copyText('+237690000000')">Copy</button>
+          </span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Reference</span>
+          <span class="info-value">Include account name</span>
+        </div>
+      `,
+      btc: `
+        <div class="info-row">
+          <span class="info-label">Network</span>
+          <span class="info-value">Bitcoin Mainnet</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">BTC Address</span>
+          <span class="info-value">
+            bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh
+            <button type="button" class="copy-btn" onclick="copyText('bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh')">Copy</button>
+          </span>
+        </div>
+      `,
+      usdt: `
+        <div class="info-row">
+          <span class="info-label">Network</span>
+          <span class="info-value">TRON (TRC20)</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">USDT Address</span>
+          <span class="info-value">
+            TYd3xK98sP2x9LpQ2
+            <button type="button" class="copy-btn" onclick="copyText('TYd3xK98sP2x9LpQ2')">Copy</button>
+          </span>
+        </div>
+      `,
+      bank: `
+        <div class="info-row">
+          <span class="info-label">Bank Name</span>
+          <span class="info-value">Global Chase Bank</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Account Name</span>
+          <span class="info-value">Company Treasury Ltd</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Account Number</span>
+          <span class="info-value">
+            9876543210
+            <button type="button" class="copy-btn" onclick="copyText('9876543210')">Copy</button>
+          </span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">SWIFT / BIC</span>
+          <span class="info-value">CHASUS33XXX</span>
+        </div>
+      `
+    };
+
+    function updateDepositDetails() {
+      const method = document.getElementById('deposit-method').value;
+      document.getElementById('payment-details-content').innerHTML = paymentDetailsData[method];
+    }
+
+    function toggleWithdrawFields() {
+      const method = document.getElementById('withdraw-method').value;
+      document.querySelectorAll('.withdraw-section').forEach(sec => sec.classList.remove('active'));
+      const activeSec = document.getElementById(`sec-${method}`);
+      if (activeSec) activeSec.classList.add('active');
+    }
+
+    function calculateWithdrawal() {
+      const amount = parseFloat(document.getElementById('withdraw-amount').value) || 0;
+      const feeRate = 0.02;
+      const fee = amount * feeRate;
+      const netTotal = amount > fee ? amount - fee : 0;
+
+      document.getElementById('sum-amount').innerText = `$${amount.toFixed(2)}`;
+      document.getElementById('sum-fee').innerText = `$${fee.toFixed(2)}`;
+      document.getElementById('sum-total').innerText = `$${netTotal.toFixed(2)}`;
+    }
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        showPaymentToast("Copied to clipboard!");
+      }).catch(() => {
+        showPaymentToast("Unable to copy.", true);
+      });
+    }
+
+    function showPaymentToast(message, error = false) {
+      paymentToast.className = error ? "toast-payment error" : "toast-payment success";
+      paymentToast.innerText = message;
+      paymentToast.style.display = "block";
+      setTimeout(() => { hidePaymentToast(); }, 4000);
+    }
+
+    function hidePaymentToast() {
+      paymentToast.style.display = "none";
+    }
+
+    async function handleDeposit(e) {
+      e.preventDefault();
+      const amount = parseFloat(document.getElementById('deposit-amount').value) || 0;
+      const ref = document.getElementById('deposit-ref').value;
+      const method = document.getElementById('deposit-method').value.toUpperCase();
+
+      if (currentAccount && amount > 0) {
+        const newBalance = (Number(currentAccount.balance) || 0) + amount;
+        
+        try {
+          const { error } = await supabaseClient
+            .from("users")
+            .update({ balance: newBalance })
+            .eq("id", currentUser.id);
+
+          if (error) throw error;
+
+          currentAccount.balance = newBalance;
+          updateAccountUI();
+          
+          showPaymentToast(`${method} deposit of $${amount} successful! New balance: $${newBalance.toFixed(2)}`);
+        } catch (error) {
+          console.error("Deposit error:", error);
+          showPaymentToast("Deposit recorded but balance update failed.", true);
+        }
+      } else {
+        showPaymentToast(`${method} deposit request of $${amount} submitted. Reference: ${ref}`);
+      }
+      
+      document.getElementById('deposit-form').reset();
+      updateDepositDetails();
+    }
+
+    async function handleWithdrawal(e) {
+      e.preventDefault();
+      const amount = parseFloat(document.getElementById('withdraw-amount').value) || 0;
+      const method = document.getElementById('withdraw-method').value.toUpperCase();
+
+      if (currentAccount && amount > 0) {
+        const balance = Number(currentAccount.balance) || 0;
+        
+        if (amount > balance) {
+          showPaymentToast(`Insufficient balance. You have $${balance.toFixed(2)} available.`, true);
+          return;
+        }
+
+        const newBalance = balance - amount;
+        
+        try {
+          const { error } = await supabaseClient
+            .from("users")
+            .update({ balance: newBalance })
+            .eq("id", currentUser.id);
+
+          if (error) throw error;
+
+          currentAccount.balance = newBalance;
+          updateAccountUI();
+          
+          showPaymentToast(`${method} withdrawal of $${amount} submitted! New balance: $${newBalance.toFixed(2)}`);
+        } catch (error) {
+          console.error("Withdrawal error:", error);
+          showPaymentToast("Withdrawal request failed.", true);
+        }
+      } else {
+        showPaymentToast(`${method} withdrawal request for $${amount} submitted successfully!`);
+      }
+      
+      document.getElementById('withdraw-form').reset();
+      toggleWithdrawFields();
+      calculateWithdrawal();
+    }
+
+    paymentModalOverlay.addEventListener('click', (e) => {
+      if (e.target === paymentModalOverlay) {
+        closePaymentModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && paymentModalOverlay.classList.contains('active')) {
+        closePaymentModal();
+      }
+    });
+
+    /* Mining Button */
+    const mineButton = document.getElementById("mineButton");
+    if (mineButton) {
+      mineButton.addEventListener("click", function() {
+        const miningStatus = document.getElementById("miningStatus");
+        const miningStatusText = document.getElementById("miningStatusText");
+        const buttonLabel = document.getElementById("buttonLabel");
+        
+        if (this.classList.contains("mining")) {
+          this.classList.remove("mining");
+          if (miningStatus) {
+            miningStatus.classList.remove("inactive");
+            miningStatusText.textContent = "Mining Stopped";
+          }
+          if (buttonLabel) buttonLabel.textContent = "⛏️ Start mining";
+        } else {
+          this.classList.add("mining");
+          if (miningStatus) {
+            miningStatus.classList.add("inactive");
+            miningStatusText.textContent = "Mining Active";
+          }
+          if (buttonLabel) buttonLabel.textContent = "Mining...";
+        }
+      });
+    }
+
+    // Initialize
     updateCalcRate();
     updateReferralUIVisibility(false);
+    updateDepositDetails();
+    calculateWithdrawal();
+    renderActivePlans();
   </script>
 </body>
 </html>
